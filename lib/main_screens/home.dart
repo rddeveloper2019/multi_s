@@ -15,7 +15,8 @@ class _HomeState extends State<Home> {
       length: 9,
       child: Scaffold(
         appBar: AppBar(
-          title: CupertinoSearchTextField(),
+          backgroundColor: Colors.white,
+          title: const CupertinoSearchTextField(),
           bottom: const TabBar(
             isScrollable: true,
             dividerColor: Colors.transparent,
@@ -34,7 +35,7 @@ class _HomeState extends State<Home> {
             ],
           ),
         ),
-        body: TabBarView(
+        body: const TabBarView(
           children: [
             Center(child: Text('men')),
             Center(child: Text('women')),

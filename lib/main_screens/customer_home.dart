@@ -12,11 +12,12 @@ class _CustomerHomeState extends State<CustomerHome> {
   int _currentIndex = 0;
 
   List<Widget> screens = [
-    Home(),
-    Center(child: Text('Search screen')),
-    Center(child: Text('Stores screen')),
-    Center(child: Text('Cart screen')),
-    Center(child: Text('Profile screen')),
+    const Home(),
+
+    const Center(child: Text('Search screen')),
+    const Center(child: Text('Stores screen')),
+    const Center(child: Text('Cart screen')),
+    const Center(child: Text('Profile screen')),
   ];
   @override
   Widget build(BuildContext context) {
@@ -26,9 +27,9 @@ class _CustomerHomeState extends State<CustomerHome> {
         elevation: 0,
         selectedItemColor: Colors.black,
         unselectedItemColor: Colors.grey,
-        selectedLabelStyle: TextStyle(fontWeight: FontWeight.w500),
+        selectedLabelStyle: const TextStyle(fontWeight: FontWeight.w500),
         type: BottomNavigationBarType.fixed,
-        items: [
+        items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.category), label: 'Search'),
           BottomNavigationBarItem(icon: Icon(Icons.shop), label: 'Stores'),
