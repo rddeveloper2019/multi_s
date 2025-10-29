@@ -13,7 +13,6 @@ class _CustomerHomeState extends State<CustomerHome> {
 
   List<Widget> screens = [
     const Home(),
-
     const Center(child: Text('Search screen')),
     const Center(child: Text('Stores screen')),
     const Center(child: Text('Cart screen')),
