@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:multi_s/main_screens/category_screen.dart';
 import 'package:multi_s/main_screens/home.dart';
 
 class CustomerHome extends StatefulWidget {
@@ -13,7 +14,7 @@ class _CustomerHomeState extends State<CustomerHome> {
 
   List<Widget> screens = [
     const Home(),
-    const Center(child: Text('Search screen')),
+    const CategoryScreen(),
     const Center(child: Text('Stores screen')),
     const Center(child: Text('Cart screen')),
     const Center(child: Text('Profile screen')),
@@ -30,7 +31,10 @@ class _CustomerHomeState extends State<CustomerHome> {
         type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.category), label: 'Search'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.category),
+            label: 'Category',
+          ),
           BottomNavigationBarItem(icon: Icon(Icons.shop), label: 'Stores'),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart),
