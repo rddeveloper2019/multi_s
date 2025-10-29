@@ -11,6 +11,55 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: CupertinoSearchTextField()));
+    return DefaultTabController(
+      length: 9,
+      child: Scaffold(
+        appBar: AppBar(
+          title: CupertinoSearchTextField(),
+          bottom: const TabBar(
+            isScrollable: true,
+            dividerColor: Colors.transparent,
+            indicatorColor: Colors.yellow,
+            indicatorWeight: 6,
+            tabs: [
+              RepeatedTab(label: 'men'),
+              RepeatedTab(label: 'women'),
+              RepeatedTab(label: 'electronics'),
+              RepeatedTab(label: 'accessories'),
+              RepeatedTab(label: 'shoes'),
+              RepeatedTab(label: 'home & garden'),
+              RepeatedTab(label: 'beauty'),
+              RepeatedTab(label: 'kids'),
+              RepeatedTab(label: 'bags'),
+            ],
+          ),
+        ),
+        body: TabBarView(
+          children: [
+            Center(child: Text('men')),
+            Center(child: Text('women')),
+            Center(child: Text('electronics')),
+            Center(child: Text('accessories')),
+            Center(child: Text('shoes')),
+            Center(child: Text('home & garden')),
+            Center(child: Text('beauty')),
+            Center(child: Text('kids')),
+            Center(child: Text('bags')),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class RepeatedTab extends StatelessWidget {
+  final String label;
+  const RepeatedTab({super.key, required this.label});
+
+  @override
+  Widget build(BuildContext context) {
+    return Tab(
+      child: Text(label, style: TextStyle(color: Colors.grey.shade600)),
+    );
   }
 }
