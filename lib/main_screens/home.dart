@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:multi_s/minor_screens/search_screen.dart';
 import 'package:multi_s/widgets/fake_search_bar.dart';
@@ -22,6 +23,7 @@ class _HomeState extends State<Home> {
             isScrollable: true,
             dividerColor: Colors.transparent,
             indicatorColor: Colors.yellow,
+            tabAlignment: TabAlignment.start,
             indicatorWeight: 6,
             tabs: [
               RepeatedTab(label: 'men'),
